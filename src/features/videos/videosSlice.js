@@ -11,7 +11,6 @@ import {
 } from '@reduxjs/toolkit'
 
 
-
 //Initial state
 const initialState = {
     videos: [],
@@ -20,9 +19,7 @@ const initialState = {
     error: ''
 }
 
-
 //Create Thunk
-
 export const fetchVideos = createAsyncThunk('videos/fetchVideos', async () => {
     const videos = await getVideos()
     return videos

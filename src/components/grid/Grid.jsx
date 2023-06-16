@@ -15,10 +15,8 @@ export default function Grid() {
     dispatch(fetchVideos());
   }, [dispatch]);
 
-  {
-    /* decide what to render */
-  }
-  var content;
+ 
+  let content;
   if (isLoading) content = <Loading />;
   // eslint-disable-next-line no-unused-vars
   if (!isLoading && isError)
