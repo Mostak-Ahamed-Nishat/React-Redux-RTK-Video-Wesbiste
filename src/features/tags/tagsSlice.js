@@ -2,26 +2,18 @@ import {
     createAsyncThunk,
     createSlice
 } from '@reduxjs/toolkit'
-
-import {
-    getTags
-} from '../videos/videosApi'
+import { getTags } from './tagsApi';
 
 export const fetchTags = createAsyncThunk('tags/fetchTags', async () => {
     const tags = await getTags()
-    console.log("***TAGS****");
-    console.log(tags);
     return tags
 })
-
-
 const initialState = {
     isLoading: false,
     tags: [],
     isError: false,
     error: ''
 }
-
 const tagsReducer = createSlice({
     name: 'tags',
     initialState,

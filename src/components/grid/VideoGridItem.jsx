@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 
 export default function VideoGridItem({ video = {} }) {
-  const {id,thumbnail,duration,title,date,views,avatar} = video;
+  
+  const {id,thumbnail,duration,title,date,views} = video;
   return (
     <>
       <div className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">

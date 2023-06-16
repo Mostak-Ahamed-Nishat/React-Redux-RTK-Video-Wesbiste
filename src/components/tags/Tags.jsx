@@ -8,6 +8,7 @@ export default function Tags() {
   const { tags, isError, isLoading, error } = useSelector(
     (state) => state.tags
   );
+  const {id}=tags
 
   const dispatch = useDispatch();
 
@@ -27,7 +28,7 @@ export default function Tags() {
   // eslint-disable-next-line no-unused-vars
   if (!isError && !isLoading)
     // eslint-disable-next-line no-unused-vars
-    content = tags.map((tag) => <Tag key={tags.id} tag={tag} />);
+    content = tags.map((tag) => <Tag key={id} tag={tag} />);
 
   return (
     <section>
