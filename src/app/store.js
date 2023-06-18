@@ -5,13 +5,15 @@ import videosReducer from '../features/videos/videosSlice'
 import tagsReducer from '../features/tags/tagsSlice'
 import videoReducer from '../features/video/videoSlice'
 import relatedVideosReducer from '../features/relatedVideos/relatedVideos'
+import filterReducer from '../features/filter/filterSlice'
 
 const store = configureStore({
     reducer: {
         videos: videosReducer,
-        tags:tagsReducer,
-        video:videoReducer,
-        relatedVideos:relatedVideosReducer
+        tags: tagsReducer,
+        video: videoReducer,
+        relatedVideos: relatedVideosReducer,
+        filter: filterReducer
     }
 })
 

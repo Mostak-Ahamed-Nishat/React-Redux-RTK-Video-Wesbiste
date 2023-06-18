@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function RelatedVideoListItemSingle({video}) {
   const {link,thumbnail,duration,title,author,id,views,date}=video
+  
   return (
     <>
       <div className="w-full flex flex-row gap-2 mb-4">

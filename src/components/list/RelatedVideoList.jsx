@@ -28,8 +28,6 @@ export default function RelatedVideo({ currentVideoId, tags }) {
    content = relatedVideos.map(video=> <RelatedVideoListItemSingle key={video.id} video={video}/>)
 
 
-
-
   return (
     <>
       <div className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto">
