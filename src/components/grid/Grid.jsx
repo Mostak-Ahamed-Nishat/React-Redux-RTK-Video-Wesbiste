@@ -7,15 +7,15 @@ export default function Grid() {
   const dispatch = useDispatch();
 
   const { videos, isLoading, isError, error } = useSelector((state) => {
-    console.log(state.videos);
     return state.videos;
   });
 
-  useEffect(() => {
-    dispatch(fetchVideos());
-  }, [dispatch]);
+  const { tags, search } = useSelector((state) => state.filter);
 
- 
+  useEffect(() => {
+    dispatch(fetchVideos({ tags, search }));
+  }, [dispatch, search, tags]);
+
   let content;
   if (isLoading) content = <Loading />;
   // eslint-disable-next-line no-unused-vars
